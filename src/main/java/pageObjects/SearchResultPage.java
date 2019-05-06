@@ -1,8 +1,8 @@
-package PageObjects;
+package pageObjects;
 
+import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Allure;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -13,10 +13,12 @@ public class SearchResultPage {
     @FindBy(css = "#pnnext")
     private SelenideElement nextButtonSelector;
 
-    private String linkSelector = ".iUh30";
+    @FindBy(css = ".iUh30")
+    private ElementsCollection pageLinks;
 
     public WebSitePage openFirstLink() {
-        $$(By.cssSelector(linkSelector)).get(0).click();
+//        $$(By.cssSelector(linkSelector)).get(0).click();
+        pageLinks.get(0).click();
         return page(WebSitePage.class);
     }
 
@@ -44,7 +46,7 @@ public class SearchResultPage {
 
     private boolean fIndDomain() {
         String domain = "https://www.testautomationday.com/";
-        for (WebElement link : $$(By.cssSelector(linkSelector))) {
+        for (WebElement link : pageLinks) {
             if (link.getText().contains(domain)) {
                 Allure.addAttachment("Search for domain", "Domain " + domain + " exist");
                 return true;

@@ -57,14 +57,7 @@
         </plugins>
     </build>
 
-
     <dependencies>
-
-        <dependency>
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-java</artifactId>
-            <version>3.8.1</version>
-        </dependency>
 
         <dependency>
             <groupId>junit</groupId>
@@ -83,6 +76,7 @@
             <artifactId>allure-junit4</artifactId>
             <version>${allure-junit4.version}</version>
         </dependency>
+
         <dependency>
             <groupId>com.automation-remarks</groupId>
             <artifactId>video-recorder-junit</artifactId>

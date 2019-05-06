@@ -1,5 +1,4 @@
-package PageObjects;
-
+package pageObjects;
 
 import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Allure;
