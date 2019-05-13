@@ -21,13 +21,8 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.18.1</version>
                 <configuration>
-                    <useSystemClassLoader>false</useSystemClassLoader>
-                    <includes>
-                        <!--suppress UnresolvedMavenProperty -->
-                        <include>${package}</include>
-                        <include>**/*$*</include>
-                    </includes>
-                    <testFailureIgnore>false</testFailureIgnore>
+                    <parallel>methods</parallel>
+                    <threadCountMethods>2</threadCountMethods>
                     <argLine>-javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"</argLine>
                     <properties>
                         <property>

@@ -1,9 +1,8 @@
-package Tests;
-
 import com.automation.remarks.video.annotations.Video;
+import helper.BaseTest;
 import org.junit.Test;
 
-public class TestCasesSelenide extends BaseTest{
+public class TestCasesSelenide extends BaseTest {
 
     @Test
     @Video

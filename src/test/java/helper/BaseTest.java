@@ -1,4 +1,4 @@
-package Tests;
+package helper;
 
 import pageObjects.MainPage;
 import com.automation.remarks.junit.VideoRule;
